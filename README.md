@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+<div align="center">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 🧠 MindSpace Web
 
-## Available Scripts
+**뇌파·안면 표정 분석으로 감정을 인식하는 맞춤형 정신건강 케어 플랫폼 「MindSpace」 소개 웹사이트**
 
-In the project directory, you can run:
+🏆 2025 동양미래EXPO 졸업작품전시회 장려상 · 팀 **MARS** (11인)
 
-### `npm start`
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)
+![React Router](https://img.shields.io/badge/React_Router-7-CA4245?logo=reactrouter&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+</div>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 📌 프로젝트 소개
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+MindSpace는 뇌파와 안면 표정으로 사용자의 감정 상태를 측정하고, 그에 맞는 VR 심리치료 게임
+(「화풀고 가실게요」, 「멍하니, 불처럼」, 「조용히 함께 살아간다」)을 추천하는 플랫폼입니다.
+이 레포는 서비스를 소개하는 **랜딩 웹사이트**이며, 웹 기능과 디자인을 맡아 만들었습니다.
 
-### `npm run build`
+## ✨ 주요 기능
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **히어로 · 기능 소개 섹션**: 심리치료 게임 3종과 서비스 콘셉트를 소개
+- **자가진단 설문 팝업**: 불안(BAI)·우울(BDI)·스트레스(PSS) 척도 문항에 답하면 점수를 계산하고 수준을 해석해서 보여 줌
+- **시스템 구조도**: 감정 측정 → 데이터 저장 → 맞춤 콘텐츠 추천 흐름을 시각화
+- **소개 영상 · 뉴스 · 팀 소개 · FAQ**: 아코디언 FAQ, 팀원 역할 카드
+- **스크롤 투 탑**과 반응형 레이아웃
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 👥 팀 MARS
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+| 역할 | 인원 |
+|---|---|
+| VR 콘텐츠 제작 | 5 |
+| 앱 기능 / 디자인 | 2 |
+| **웹 기능 / 디자인** | 2 (김병권 포함) |
+| 총괄 · 감정 분석 · DB 통신 | 2 |
 
-### `npm run eject`
+## 🧱 구조
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
+src/
+├─ pages/Main_Page.js
+├─ components/   # Header, HeroSection, FeatureSection, SystemFlow, SurveyPopup,
+│                #   VideoSection, NewsSection, TeamSection, FaqSection, ScrollToTop
+├─ data/         # 설문 문항, 뉴스, 팀 정보
+└─ utils/calculateResults.js   # BAI·BDI·PSS 점수 계산·해석
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🚀 실행
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+npm install
+npm start      # http://localhost:3000
+```
